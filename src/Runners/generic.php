@@ -5,6 +5,7 @@ use exussum12\CoverageChecker;
 use exussum12\CoverageChecker\Outputs\Json;
 use exussum12\CoverageChecker\Outputs\Phpcs;
 use exussum12\CoverageChecker\Outputs\Text;
+use exussum12\CoverageChecker\Outputs\Junit;
 
 require_once __DIR__ . "/../functions.php";
 global $argv;
@@ -61,6 +62,7 @@ $outputArray = [
     'text' => Text::class,
     'json' => Json::class,
     'phpcs' => Phpcs::class,
+    'junit' => Junit::class
 ];
 $report = 'text';
 $requestedReport = $args->getArg('report');
